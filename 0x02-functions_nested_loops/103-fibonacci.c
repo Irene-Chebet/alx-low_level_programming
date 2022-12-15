@@ -1,24 +1,26 @@
 #include <stdio.h>
+
 /**
- * main - sum even fibronacci numbers under 4 million.
- * Return: Nothing.
+ * main - main block
+ * Descripion: Print the sum of even Fibonacci mumbers up to a fib value
+ * not exceeding 4,000,000.
+ * Return: 0
  */
 int main(void)
 {
-	unsigned long count, i, j, k, sums;
+	int i = 1, j = 2, total = 0;
+	int k;
 
-	i = sums = 0;
-	j = 1;
-	for (count = 0; count < count < 50; count++)
+	while (j < 4000000)
 	{
-		k = i + j;
-		i = j;
-		j = k;
-		if (k % 2 == 0 && k < 4000000)
-		{
-			sums += k;
-		}
+		if (j % 2 == 0)
+			total += j;
+
+
+		k = j;
+		j += i;
+		i = k;
 	}
-	printf("%lu\n", sums);
+	printf("%d\n", total);
 	return (0);
 }
