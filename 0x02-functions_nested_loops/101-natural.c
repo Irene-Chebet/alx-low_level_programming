@@ -10,19 +10,11 @@
 
 int main(void)
 {
-	int i = 1;
-	int total = 0;
+	int i, res;
 
-	while (i < 1024)
-	{
-		if (i % 3 == 0)
-			total += 1;
-		else if (i % 5 == 0)
-			total += i;
-
-		i++
-	}
-	printf("%d\", total);
-
+	for (i = 0; i < 1024; i++)
+		if (i % 3 == 0 || i % 5 == 0)
+			res += i;
+	printf("%d\n", res);
 	return (0);
 }
