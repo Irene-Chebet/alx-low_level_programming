@@ -1,37 +1,22 @@
 #include "main.h"
-
 /**
- * main -minutes in 24 hours - Entry point
- * jack_beuer - prints every minute of the day
- *
- * Return: void
+ * jack_bauer - prints time table in this format: HH:MM
+ * Return: the sum of two numbers.
  */
-
 void jack_bauer(void)
 {
-	int x = 0;
-	int a = 0, b = 0, c = 0, d = 0;
+	int h, m;
 
-	while (x < 1440)
+	for (h = 0; h < 24; h++)
 	{
-		_putchar(a + '0');
-		_putchar(b + '0');
-		_putchar(':');
-		_putchar(c + '0');
-		_putchar(d + '0');
-		_putchar('\n');
-
-		d++;
-		if (c > 5)
+		for (m = 0; m < 60; m++)
 		{
-			c = 0;
-			b++;
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
+			_putchar(':');
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
 		}
-		if (b > 9)
-		{
-			b = 0;
-			a++;
-		}
-		x++;
 	}
 }
