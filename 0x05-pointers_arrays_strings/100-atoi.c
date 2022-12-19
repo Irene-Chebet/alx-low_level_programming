@@ -1,11 +1,12 @@
 #include "main.h"
+
 /**
- * _atoi - converts the first set of digits in a string to an integer
+ * _atoi - converts the first set of digits in a string to an integer,
  * taking into account the sign of the number
  * @s: string to be converted
- * Return: int cantaining the converted number
+ * Return: int containing the converted number
  */
-int _atoid(char *s)
+int _atoi(char *s)
 {
 	int index, ind2;
 	unsigned int res;
@@ -36,5 +37,5 @@ int _atoid(char *s)
 	if (sign < 0)
 		res *= sign;
 	return (res);
-}
 
+}
