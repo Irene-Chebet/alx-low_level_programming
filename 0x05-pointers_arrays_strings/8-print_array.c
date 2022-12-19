@@ -1,20 +1,23 @@
+#include <stdio.h>
+
 /**
- * *_strcpy -copies string to given memory location
- * @dest:where the string needs to be copied
- * @src: where the string is
+ * print_array - prints fist n elements of array
+ * @a: int array to display from
+ * @n: number of elements to display
  *
- * return: char
+ * Return: void
  */
-char *_strcpy(char *dest, char *src)
+void print_arry(int *a, int n)
 {
-	int len = 0;
+	int i = 0;
 
-	while (*(src + len) != '\0')
+	while (i < n)
 	{
-		*(dest + len) = *(src + len);
-		len++;
+		if (i == n - 1)
+			printf("%d", *(a + 1));
+		else
+			printf("%d, ", *(a + i));
+		i++;
 	}
-	*(dest + len) = *(src + len);
-
-	return (dest);
+	printf("\n");
 }
